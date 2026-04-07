@@ -16,7 +16,7 @@ document.getElementById("formAdocao").addEventListener("submit", function (e) {
   const motivo   = document.getElementById("motivo").value.trim();
   const termo    = document.getElementById("termo").checked;
  
-  // Validações
+ 
   if (nome.length < 3)               return alert("Nome inválido.");
   if (!email.includes("@"))          return alert("Email inválido.");
   if (telefone.replace(/\D/g, "").length < 8) return alert("Telefone inválido.");
@@ -31,7 +31,7 @@ document.getElementById("formAdocao").addEventListener("submit", function (e) {
   if (motivo.length < 10)            return alert("Motivo muito curto. Elabore um pouco mais.");
   if (!termo)                        return alert("Você deve aceitar o termo de responsabilidade.");
  
-  // Regras de negócio
+ 
   if (moradia === "apartamento" && quintal.value === "sim")
     return alert("Apartamento não pode ter quintal.");
  
@@ -65,7 +65,7 @@ document.getElementById("formAdocao").addEventListener("submit", function (e) {
   if (decisao?.toLowerCase() === "sim")
     alert("Atenção: evite decisões impulsivas!");
  
-  // Sucesso
+ 
   const resultado = document.getElementById("resultado");
   resultado.style.display = "block";
   resultado.innerHTML = `
