@@ -78,4 +78,3 @@ document.getElementById("formAdocao").addEventListener("submit", function (e) {
  
   resultado.scrollIntoView({ behavior: "smooth", block: "nearest" });
 });
- 
